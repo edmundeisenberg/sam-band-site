@@ -1,3 +1,54 @@
+body {
+	margin:0 0 0 0;
+}
+
 h1 {
 	color:red;
 }
+
+.layout {
+	display:grid;
+	grid-template-rows:400px 400px 400px;
+	grid-template-columns:100vw;
+	background-image:url("assets/dither_bg.png");
+}
+
+#effect-1 {
+	/* wave-gradient */
+	grid-rows:1;
+	}
+#effect-2 {
+	
+grid-rows:2;
+}
+#effect-3 {
+	grid-rows:3;
+}
+
+@media only screen and (min-device-width: 768px) {
+	/* desktop styles */
+	.layout {
+		grid-template-rows:50vw 50vw;
+		grid-template-columns:50vh 50vh;
+		background-image:url("assets/dither_bg.png");
+	}
+	
+	#effect-1 {
+	/* wave-gradient */
+		grid-columns:1;
+		grid-rows:1;
+	}
+	#effect-2 {
+	/* shatter effect using js */
+		grid-columns:2;
+		grid-rows:1;
+	}
+	#effect-3 {
+		grid-columns:1;
+		grid-rows:2;
+	}
+}
+/* 
+
+animations
+ */
